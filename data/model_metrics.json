@@ -1,0 +1,40 @@
+{
+  "champion": "xgboost",
+  "selection_rule": "highest 5-fold CV R2 on the training split",
+  "models": {
+    "ridge": {
+      "test_r2": 0.4431,
+      "test_rmse": 12489.25,
+      "test_mae": 8167.49,
+      "cv_r2": 0.4304,
+      "cv_r2_std": 0.0071
+    },
+    "random_forest": {
+      "test_r2": 0.7477,
+      "test_rmse": 8405.82,
+      "test_mae": 4803.44,
+      "cv_r2": 0.7334,
+      "cv_r2_std": 0.0194
+    },
+    "lightgbm": {
+      "test_r2": 0.7597,
+      "test_rmse": 8203.94,
+      "test_mae": 4819.14,
+      "cv_r2": 0.7512,
+      "cv_r2_std": 0.0195
+    },
+    "xgboost": {
+      "test_r2": 0.7628,
+      "test_rmse": 8150.29,
+      "test_mae": 4688.29,
+      "cv_r2": 0.7525,
+      "cv_r2_std": 0.0192
+    }
+  },
+  "interval": {
+    "coverage": 0.8,
+    "ratio_low": 0.565,
+    "ratio_high": 1.382,
+    "test_vehicles": 2803
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "champion": "xgboost",
+  "selection_rule": "highest 5-fold CV R2 on the training split",
+  "models": {
+    "ridge": {
+      "baseline": {
+        "cv_r2_mean": 0.4302782440059819,
+        "cv_r2_std": 0.007327697201168692,
+        "r2": 0.43122886460583776,
+        "rmse": 12621.48436692286,
+        "mae": 8321.447233223873
+      },
+      "tuned": {
+        "cv_r2_mean": 0.43043699625091525,
+        "cv_r2_std": 0.007097865965059968,
+        "best_params": {
+          "alpha": 1.8873918221350976
+        },
+        "search": "RidgeCV, 30 log-spaced alphas",
+        "r2": 0.43178789272000917,
+        "rmse": 12615.280202592106,
+        "mae": 8330.393619842653
+      }
+    },
+    "random_forest": {
+      "baseline": {
+        "cv_r2_mean": 0.7331494981431186,
+        "cv_r2_std": 0.02007127030140404,
+        "r2": 0.7437294715580636,
+        "rmse": 8472.098410153774,
+        "mae": 4862.573655045401
+      },
+      "tuned": {
+        "cv_r2_mean": 0.7334469146044854,
+        "cv_r2_std": 0.019350591206386467,
+        "best_params": {
+          "n_estimators": 150,
+          "min_samples_split": 8,
+          "min_samples_leaf": 2,
+          "max_features": 0.9,
+          "max_depth": 16
+        },
+        "search": "RandomizedSearchCV, 10 candidates x 5 folds",
+        "r2": 0.7477232469445088,
+        "rmse": 8405.823678568438,
+        "mae": 4803.44097353191
+      }
+    },
+    "lightgbm": {
+      "baseline": {
+        "cv_r2_mean": 0.745702871452958,
+        "cv_r2_std": 0.013380705655874833,
+        "r2": 0.7552701821739572,
+        "rmse": 8279.137645393212,
+        "mae": 4849.567298487535
+      },
+      "tuned": {
+        "cv_r2_mean": 0.7512384985782983,
+        "cv_r2_std": 0.01947490012755269,
+        "best_params": {
+          "subsample_freq": 1,
+          "subsample": 1.0,
+          "reg_lambda": 0,
+          "num_leaves": 31,
+          "n_estimators": 200,
+          "min_child_samples": 10,
+          "learning_rate": 0.08,
+          "colsample_bytree": 0.8
+        },
+        "search": "RandomizedSearchCV, 30 candidates x 5 folds",
+        "r2": 0.7596691466867981,
+        "rmse": 8204.392403190426,
+        "mae": 4819.400027928162
+      }
+    },
+    "xgboost": {
+      "baseline": {
+        "cv_r2_mean": 0.7393545508384705,
+        "cv_r2_std": 0.016629317390969466,
+        "r2": 0.7503000497817993,
+        "rmse": 8362.784225364181,
+        "mae": 4890.47314453125
+      },
+      "tuned": {
+        "cv_r2_mean": 0.7525375843048095,
+        "cv_r2_std": 0.019168537199166693,
+        "best_params": {
+          "subsample": 0.7,
+          "reg_lambda": 1,
+          "n_estimators": 500,
+          "min_child_weight": 5,
+          "max_depth": 8,
+          "learning_rate": 0.02,
+          "colsample_bytree": 1.0
+        },
+        "search": "RandomizedSearchCV, 25 candidates x 5 folds",
+        "r2": 0.7628280520439148,
+        "rmse": 8150.294227817791,
+        "mae": 4688.29345703125
+      }
+    }
+  }
+}

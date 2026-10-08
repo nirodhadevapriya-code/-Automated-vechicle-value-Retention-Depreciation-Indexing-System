@@ -1,0 +1,8 @@
+{
+  "test_cars": 2803,
+  "rejected_by_validation": 0,
+  "compared": 2803,
+  "identical_within_$0.01": 2803,
+  "max_abs_difference_usd": 0.0,
+  "mean_abs_difference_usd": 0.0
+}

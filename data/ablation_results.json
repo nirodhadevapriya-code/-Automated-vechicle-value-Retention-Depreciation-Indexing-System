@@ -1,0 +1,44 @@
+{
+  "All 57 features (final configuration)": {
+    "n_features": 57,
+    "cv_r2": 0.7525,
+    "test_r2": 0.7628,
+    "test_mae": 4688.0
+  },
+  "Without Levy": {
+    "n_features": 56,
+    "cv_r2": 0.7463,
+    "test_r2": 0.7539,
+    "test_mae": 4800.0
+  },
+  "Without Mileage_per_year": {
+    "n_features": 56,
+    "cv_r2": 0.7548,
+    "test_r2": 0.7609,
+    "test_mae": 4694.0
+  },
+  "Without Is_Turbo and Is_Luxury_Make": {
+    "n_features": 55,
+    "cv_r2": 0.7351,
+    "test_r2": 0.7228,
+    "test_mae": 4926.0
+  },
+  "Without colour dummies": {
+    "n_features": 49,
+    "cv_r2": 0.753,
+    "test_r2": 0.7598,
+    "test_mae": 4698.0
+  },
+  "Without Age and Mileage_per_year": {
+    "n_features": 55,
+    "cv_r2": 0.65,
+    "test_r2": 0.6453,
+    "test_mae": 5859.0
+  },
+  "Log-price target (all features)": {
+    "n_features": 57,
+    "cv_r2": 0.7096,
+    "test_r2": 0.7088,
+    "test_mae": 4860.0
+  }
+}

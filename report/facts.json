@@ -1,0 +1,158 @@
+{
+  "raw_rows": 19237,
+  "raw_cols": 18,
+  "raw_price": {
+    "min": 1.0,
+    "50%": 13172.0,
+    "mean": 18555.92722357956,
+    "max": 26307500.0
+  },
+  "raw_price_skew": 136.4704265426872,
+  "levy_dash": 5819,
+  "levy_dash_pct": 30.2,
+  "n_manufacturers": 65,
+  "n_models": 1590,
+  "year_min": 1939,
+  "year_max": 2020,
+  "doors_values": {
+    "04-May": 18332,
+    "02-Mar": 777,
+    ">5": 128
+  },
+  "wheel_counts": {
+    "Left wheel": 17753,
+    "Right-hand drive": 1484
+  },
+  "dup_with_id": 313,
+  "dup_without_id": 3512,
+  "failing_each_rule": {
+    "Price between $500 and $150,000": 951,
+    "Mileage between 10 and 500,000 km": 824,
+    "Engine volume between 0.5 and 7.0 L": 33,
+    "Production year between 1980 and 2026": 22
+  },
+  "cleaning_steps": [
+    [
+      "Raw dataset (ID dropped)",
+      19237
+    ],
+    [
+      "After removing duplicate listings",
+      15725
+    ],
+    [
+      "After domain-range filters",
+      14011
+    ]
+  ],
+  "levy_missing_after_clean": 4900,
+  "levy_missing_pct_after_clean": 35.0,
+  "clean_price": {
+    "min": 549.0,
+    "25%": 9095.0,
+    "50%": 15681.0,
+    "75%": 24462.0,
+    "max": 147397.0,
+    "mean": 19794.19663121833
+  },
+  "clean_price_skew": 2.3185310947509032,
+  "clean_log_skew": -1.0119362379640984,
+  "wheel_mean_price": {
+    "Left wheel": 20754.0,
+    "Right-hand drive": 9887.0
+  },
+  "wheel_median_price": {
+    "Left wheel": 16741.0,
+    "Right-hand drive": 9095.0
+  },
+  "wheel_count_clean": {
+    "Left wheel": 12774,
+    "Right-hand drive": 1237
+  },
+  "corr_price": {
+    "Price": 1.0,
+    "Levy": 0.08,
+    "Engine_displacement": 0.21,
+    "Mileage": -0.27,
+    "Cylinders": 0.13,
+    "Airbags": 0.03,
+    "Age": -0.4
+  },
+  "corr_disp_cyl": 0.75,
+  "corr_age_mileage": 0.35,
+  "luxury_mean_price": {
+    "false": 18667.0,
+    "true": 24472.0
+  },
+  "fuel_counts": {
+    "Petrol": 7859,
+    "Diesel": 3033,
+    "Hybrid": 2065,
+    "LPG": 588,
+    "CNG": 383,
+    "Plug-in Hybrid": 82,
+    "Hydrogen": 1
+  },
+  "hybrid_mean_price": {
+    "CNG": 8722.0,
+    "Diesel": 27157.0,
+    "Hybrid": 15971.0,
+    "Hydrogen": 20385.0,
+    "LPG": 14335.0,
+    "Petrol": 18862.0,
+    "Plug-in Hybrid": 23977.0
+  },
+  "year_2019_2020_pct_of_clean": 1.6,
+  "clean_year_max": 2020,
+  "n_features": 57,
+  "train_rows": 11208,
+  "test_rows": 2803,
+  "test_rows_in_train": 73,
+  "top_features": {
+    "Gear box type_Tiptronic": 0.078,
+    "Fuel type_Diesel": 0.068,
+    "Is_Luxury_Make": 0.063,
+    "Age": 0.057,
+    "Is_Turbo": 0.056,
+    "Category_Jeep": 0.05,
+    "Category_Sedan": 0.048,
+    "Category_Hatchback": 0.047,
+    "Manufacturer_grouped_FORD": 0.037,
+    "Airbags": 0.03,
+    "Engine_displacement": 0.028,
+    "Manufacturer_grouped_HONDA": 0.025
+  },
+  "final_test": {
+    "r2": 0.7628,
+    "median_ape": 0.171,
+    "within_15pct": 0.45,
+    "within_25pct": 0.64
+  },
+  "error_by_price_band": {
+    "under 3k": {
+      "n": 190,
+      "mae": 6020,
+      "median_ape": 3.545
+    },
+    "3k-8k": {
+      "n": 384,
+      "mae": 2807,
+      "median_ape": 0.264
+    },
+    "8k-15k": {
+      "n": 737,
+      "mae": 2768,
+      "median_ape": 0.165
+    },
+    "15k-30k": {
+      "n": 990,
+      "mae": 3860,
+      "median_ape": 0.132
+    },
+    "over 30k": {
+      "n": 502,
+      "mae": 10076,
+      "median_ape": 0.151
+    }
+  }
+}
