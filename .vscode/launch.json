@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run website (Stage 9 service + Stage 10 site)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/04_Stage_9_Backend/app.py",
+            "cwd": "${workspaceFolder}/04_Stage_9_Backend",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Run Stage 9 tests",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "unittest",
+            "args": ["discover", "-s", "tests", "-v"],
+            "cwd": "${workspaceFolder}/04_Stage_9_Backend",
+            "console": "integratedTerminal"
+        }
+    ]
+}

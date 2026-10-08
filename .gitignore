@@ -1,9 +1,12 @@
+# Python
 __pycache__/
 *.pyc
 .venv/
 venv/
 .env
-node_modules/
+.ipynb_checkpoints/
+
+# Office lock files and OS files
 ~$*
 .DS_Store
 Thumbs.db
